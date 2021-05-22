@@ -24,11 +24,12 @@ $.ajax("https://phl.carto.com/api/v2/sql?q=SELECT%20*%20FROM%20registered_local_
             console.log('bad request: ', error);
         }
     );
-    }
-
-
-function render() {
-    let yunkBiz = businesses.filter(function(biz) {
-        return biz.zip_code === "19127";
-
+    };
+    
+    function render () {
+    let philaZip = businesses.filter(function(biz) {
+        return biz.zip_code === "19128";
     });
+    console.log(philaZip);
+    };
+
