@@ -48,8 +48,8 @@ $.ajax("https://phl.carto.com/api/v2/sql?q=SELECT%20*%20FROM%20registered_local_
             return `
             <article>
                 <h2>${biz.business_name}</h2>
-                <p>Address: ${biz.business_address}</p>
-                <p>Email: ${biz.email}</p>
+                <p><strong>Address:</strong> ${biz.business_address}</p>
+                <p><strong>Email:</strong> ${biz.email}</p>
             </article>
             `;
         });
