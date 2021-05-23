@@ -10,13 +10,17 @@
 /*----- app's state (variables) -----*/
 let businesses;
 let localZip
+
 // let bizneses = businesses.rows 
 /*----- cached element references -----*/
 /*----- event listeners -----*/
 /*----- functions -----*/
-getAppData();
 
-function getAppData() { 
+
+function getAppData(event) { 
+    event.preventDefault();
+    $('main').empty();
+
 $.ajax("https://phl.carto.com/api/v2/sql?q=SELECT%20*%20FROM%20registered_local_businesses%20ORDER%20BY%20business_name%20ASC")
     .then(function (data) {
             businesses = data.rows;
@@ -31,8 +35,9 @@ $.ajax("https://phl.carto.com/api/v2/sql?q=SELECT%20*%20FROM%20registered_local_
     };
     // filter by zip code 
     function filter () {
+        let searchText = $("input#input").val()
     localZip = businesses.filter(function(biz) {
-        return biz.zip_code === "19128";
+        return biz.zip_code === searchText;
     });
     console.log(localZip);
     };
@@ -43,8 +48,8 @@ $.ajax("https://phl.carto.com/api/v2/sql?q=SELECT%20*%20FROM%20registered_local_
             return `
             <article>
                 <h2>${biz.business_name}</h2>
-                <p>${biz.business_address}</p>
-                <p>${biz.email}</p>
+                <p>Address: ${biz.business_address}</p>
+                <p>Email: ${biz.email}</p>
             </article>
             `;
         });
@@ -52,3 +57,9 @@ $.ajax("https://phl.carto.com/api/v2/sql?q=SELECT%20*%20FROM%20registered_local_
         $('main').append(html);
     }
 
+$('form').on('submit', getAppData);
+
+//refresh the page to get back to zipmap 
+$('#home').click(function() {
+    location.href=location.href;
+});
