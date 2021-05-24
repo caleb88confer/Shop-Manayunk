@@ -1,5 +1,5 @@
-# Shop Manayunk 
-a simple web app for listing the businesses for the Philadelphia neighborhoods of Manayunk(19127) and Roxborough(19128)
+# Support Local Philly 
+a simple web app for listing the businesses for the neighborhoods of Philadelphia.
 
 ---
 ## Technologies
@@ -12,13 +12,15 @@ a simple web app for listing the businesses for the Philadelphia neighborhoods o
 ---
 
 ## Screenshots
+![Homepage](imgs/home.png)
 
+![List-page](imgs/list.png)
 ---
 ### Wire-frames
-
+![wire-frame](imgs/wire.png)
 
 ### Images 
-
+![map](imgs/mapFinal.png)
 ---
 
 ## Getting Started 
@@ -26,4 +28,6 @@ a simple web app for listing the businesses for the Philadelphia neighborhoods o
 [click here](#) to see the working app
 
 ---
-## Future Enhancements 
+## Future Enhancements
+
+add clickability to the map so a user can select based on the visual. 
