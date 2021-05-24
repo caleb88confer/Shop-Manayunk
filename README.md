@@ -25,7 +25,7 @@ a simple web app for listing the businesses for the neighborhoods of Philadelphi
 
 ## Getting Started 
 
-[click here](#) to see the working app
+[click here](https://caleb88confer.github.io/Support-Local-Philly/) to see the working app
 
 ---
 ## Future Enhancements
